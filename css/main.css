@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+
+:root {
+    --background: url("/img/broken_noise.png");
+    --main: rgb(200, 200, 200);
+    --accent1: rgb(140, 140, 140);
+    --accent2: rgb(189, 165, 217);
+    --accent-font: 'Share Tech Mono', monospace;
+    --border: .15em solid var(--accent1);
+}
+
+/* BASE */
+body {
+    background-image: var(--background);
+    color: var(--main);
+    font-weight: 300;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+.container {
+    width: auto;
+    max-width: 42em;
+}
+
+nav {
+    margin: 6em auto 2.5em auto;
+    padding-bottom: 2em;
+    border-bottom: var(--border);
+}
+
+nav h1 {
+    font-size: 2.75rem;
+}
+
+header {
+    margin-bottom: 1.5em;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+main {
+    max-width: 40em;
+    margin: 0 auto;
+}
+
+footer {
+    border-top: var(--border);
+    margin-top: 2.25em;
+    padding: 1.75em 0em 4em 0em;
+}
+
+/* ATTRIBUTES */
+strong {
+    font-family: var(--accent-font);
+}
+
+a {
+    color: var(--main);
+}
+
+p a {
+    color: var(--accent2);
+}
+
+a:hover {
+    color: var(--accent1);
+    text-decoration: none;
+}
+
+hr {
+    height: 2px;
+    border-radius: 1px;
+    color: var(--accent1);
+    min-width: 2rem;
+    background-color: var(--accent1);
+    width: 60%;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+/* HEADERS */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--accent-font);
+    margin-top: 2rem;
+}
+
+h1 {
+    font-size: 1.25rem;
+}
+
+h2 {
+    font-size: 1.1rem;
+}
+
+h3, h4, h5, h6 {
+    font-size: 1rem;
+}
+
+/* IMAGES */
+img {
+    max-width: 100%;
+    max-height: auto;
+}
+
+/* COLLECTIONS */
+section {
+    margin: 2rem auto;
+}
+
+.list-group {
+    margin: 4rem 0 4rem 0;
+}
+
+.list-group img {
+    max-width: 4rem;
+}
+
+.list-group-item {
+    background-color: transparent;
+    border-radius: 0;
+    color: var(--main);
+}
+
+.list-group-item:hover {
+    background-color:rgba(255, 255, 255, 0.05);
+    border-radius: 0;
+    color: var(--main);
+}
+
+@media (max-width: 576px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-columns {
+        column-count: 3;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-columns {
+        column-count: 3;
+    }
+}
