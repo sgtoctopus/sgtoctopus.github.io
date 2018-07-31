@@ -6,7 +6,7 @@ deploy:
   skip_cleanup: true
   github_token: "$GH_TOKEN"
   target_branch: master
-  fqdn: steviecreates.com # This updates the repository settings in GitHub and also adds a CNAME file in the master branch
+  fqdn: www.steviecreates.com # This updates the repository settings in GitHub and also adds a CNAME file in the master branch
   keep-history: true
   verbose: true
   on:
