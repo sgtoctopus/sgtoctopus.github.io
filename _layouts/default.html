@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0"/>
-        <title>Stevie Oberg </title>
-        <meta name="description" content="Coder. Writer. Creator."/>
+        <title>{{ site.title }} {% if page.title %} - {{ page.title }} {% endif %}</title>
+        <meta name="description" content="{{ site.description }}"/>
         <link rel="icon" type="image/png" href="/favicon.ico">
 
         <!-- Custom CSS -->
@@ -16,48 +16,22 @@
     <body>
         <div class="content">
             <header>
-                <a href="/">Stevie Oberg</a>
-                <small>Coder. Writer. Creator.</small>
+                <a href="/">{{ site.title }}</a>
+                <small>{{ site.description }}</small>
             </header>
 
             <main>
-                <p><img src="assets/img/selfie.jpg" alt="Its a Me, Stevie" class="focus" /></p>
-
-<p>Hi! I’m <strong>Stevie Oberg</strong> and I like creating things that are useful and/or beautiful. Usually using code but also through art and writing. I’m currently working as an <strong>Software Developer</strong> but one day I hope to combine my love of tech and books to become a Librarian.</p>
-
-<div class="social">
-    <a href="https://github.com/stevieoberg">
-        <i class="fab fa-github"></i>
-    </a>
-    <a href="https://twitter.com/stevieoberg">
-        <i class="fab fa-twitter"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/stevieoberg">
-        <i class="fab fa-linkedin-in"></i>
-    </a>
-    <a href="https://dev.to/stevieoberg">
-        <i class="fab fa-dev"></i>
-    </a>
-    <a href="/feed.xml">
-        <i class="fas fa-rss"></i>
-    </a>
-</div>
-
-<h1 id="thoughts">Thoughts</h1>
-
-<ul id="posts">
-  <li><a href="/2018/11/20/showing-my-work.html">Showing My Work</a> <small>November 20, 2018</small></li>
-</ul>
-
-
+                {{ content }}
 
                 <h2 id="terminal" class="terminal" onclick="surprise()"></h2>
             </main>
 
             <footer>
-                
+                {% if page.url != "/" %}
+                <a href="/">&#x1F3E0;</a>
+                {% else %}
                     &#x2665;
-                
+                {% endif %}
             </footer>
         </div>
 
@@ -68,7 +42,7 @@
             });
 
             function surprise() {
-                typewriter.typeString('Hello! ;)')
+                typewriter.typeString('{{ page.secret }}')
                     .pauseFor(2500)
                     .deleteAll()
                     .start();
